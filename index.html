@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conjugador de Verbos Franceses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conjugador de Verbos Franceses</h1>
+
+        <div class="input-section">
+            <label for="verbInput">Escribe un verbo en francés o español:</label>
+            <input type="text" id="verbInput" placeholder="Ej: aimer, ser">
+            
+            <label for="verbSelect">O elige de la lista (francés):</label>
+            <select id="verbSelect">
+                <option value="">-- Selecciona un verbo --</option>
+            </select>
+            
+            <button id="searchButton">Buscar</button>
+        </div>
+
+        <div id="verbInfo" class="verb-info-container" style="display:none;">
+            <!-- El título y la información general ahora son ítems de la grilla que ocupan todo el ancho -->
+            <div id="verbNameContainer"> <!-- Contenedor para h2 y botón de hablar -->
+                <h2 id="verbName"></h2>
+                <button id="speakVerbNameButton" class="speak-btn" title="Escuchar pronunciación del verbo">🔊</button>
+            </div>
+            <p class="verb-general-detail"><strong>Significado:</strong> <span id="verbMeaning"></span></p>
+            <p class="verb-general-detail"><strong>Tipo:</strong> <span id="verbRegularity"></span></p>
+            <p class="verb-general-detail"><strong>Auxiliar (Passé Composé):</strong> <span id="verbAuxiliary"></span></p>
+
+            <!-- Las secciones de tiempo serán las columnas de la grilla -->
+            <div class="tense-section">
+                <h3>Présent</h3>
+                <ul id="presentConjugation" class="conjugation-list"></ul>
+                <p class="example"><strong>Ejemplo:</strong> <span id="presentExample"></span></p>
+            </div>
+
+            <div class="tense-section">
+                <h3>Passé Composé</h3>
+                <ul id="passeComposeConjugation" class="conjugation-list"></ul>
+                <p class="example"><strong>Ejemplo:</strong> <span id="passeComposeExample"></span></p>
+            </div>
+
+            <div class="tense-section">
+                <h3>Imparfait</h3>
+                <ul id="imparfaitConjugation" class="conjugation-list"></ul>
+                <p class="example"><strong>Ejemplo:</strong> <span id="imparfaitExample"></span></p>
+            </div>
+
+            <div class="tense-section">
+                <h3>Futur Simple</h3>
+                <ul id="futurConjugation" class="conjugation-list"></ul>
+                <p class="example"><strong>Ejemplo:</strong> <span id="futurExample"></span></p>
+            </div>
+        </div>
+        <div id="errorMessage" class="error-message" style="display:none;"></div>
+
+        <!-- NUEVA SECCIÓN PARA RECURSOS ADICIONALES -->
+        <hr style="margin-top: 30px; margin-bottom: 20px;">
+        <div class="additional-resources-section">
+            <h2>Recursos Adicionales</h2>
+            <button id="openPhrasesPageButton" class="searchButton" style="/* Estilos opcionales si quieres que se parezca a tu botón de búsqueda */ display: inline-block; margin-top: 10px;">
+                Guía de Frases y Vocabulario Útil
+            </button>
+        </div>
+        <!-- FIN DE LA NUEVA SECCIÓN -->
+
+    </div> <!-- Cierre del div.container -->
+
+    <script src="verbs.js"></script> <!-- Asumo que este es tu archivo con verbsDB, spanishToFrench, etc. -->
+    <script src="script.js"></script> <!-- Asumo que este es tu script principal para la lógica del conjugador -->
+
+    <script>
+        // Script para el botón de la nueva página de frases útiles
+        document.getElementById('openPhrasesPageButton').addEventListener('click', function() {
+            // Asegúrate de que 'frases_utiles.html' esté en el mismo directorio
+            // o proporciona la ruta correcta.
+            window.open('frases_utiles.html', '_blank'); // Abre en una nueva pestaña
+        });
+    </script>
+</body>
+</html>

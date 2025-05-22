@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+html {
+    scroll-behavior: smooth; /* Para el desplazamiento suave al hacer clic en los enlaces internos */
+}
+
+.container {
+    width: 80%;
+    max-width: 960px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 30px;
+}
+
+/* Estilo para el índice de contenidos */
+#table-of-contents {
+    background-color: #e9ecef;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+#table-of-contents h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0056b3;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#table-of-contents ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para ponerlos en línea si caben */
+    flex-wrap: wrap; /* Para que se envuelvan si no caben */
+    justify-content: center; /* Centrar los items */
+}
+
+#table-of-contents ul li {
+    margin: 5px 10px; /* Espacio entre elementos del menú */
+}
+
+#table-of-contents ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#table-of-contents ul li a:hover,
+#table-of-contents ul li a:focus {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Estilo para cada sección de contenido */
+.content-section {
+    margin-bottom: 40px;
+    padding-top: 20px; /* Espacio para que el anclaje no quede pegado al borde superior */
+    border-top: 1px dashed #ddd; /* Separador visual */
+}
+.content-section:first-of-type { /* La primera sección no necesita el borde superior de separación */
+    border-top: none;
+    padding-top: 0;
+}
+
+
+.content-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    font-size: 1.4em;
+}
+
+/* Estilo para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle; /* Alinea verticalmente el contenido de la celda */
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Celda que contiene la frase y el botón de hablar */
+/* Asumiendo que la columna francesa es la segunda (td:nth-child(2)) */
+/* Si tuvieras más columnas antes de la francesa, ajusta el número. */
+/* Por ejemplo, si la columna de francés fuera la tercera, usarías td:nth-child(3) */
+table td:nth-child(2) {
+    display: flex;
+    justify-content: space-between; /* Separa la frase del botón */
+    align-items: center; /* Alinea verticalmente frase y botón */
+}
+/* Si solo quieres que la frase ocupe el espacio y el botón esté al final, puedes hacer: */
+/* table td:nth-child(2) > span.phrase-to-speak {
+    flex-grow: 1; 
+} */
+
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para el botón de pronunciación */
+.speak-phrase-btn {
+    background: none;
+    border: none;
+    font-size: 1.1em; /* Ajusta el tamaño del icono */
+    cursor: pointer;
+    padding: 0 5px; /* Ajusta el padding si es necesario */
+    color: #007bff;
+    margin-left: 8px; /* Espacio entre la frase (o el último span) y el botón */
+    flex-shrink: 0; /* Evita que el botón se encoja si la frase es muy larga */
+}
+
+.speak-phrase-btn:hover {
+    color: #0056b3;
+}
+
+/* Para ocultar texto a usuarios videntes pero mantenerlo para lectores de pantalla */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

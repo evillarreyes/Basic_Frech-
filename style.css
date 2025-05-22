@@ -1,0 +1,230 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px; /* Aumentado para dar espacio a las columnas */
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+.input-section {
+    margin-bottom: 30px; /* Más espacio antes de la info del verbo */
+    padding: 15px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-section input[type="text"],
+.input-section select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-section button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.input-section button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Estilos para el contenedor de información del verbo y las columnas de tiempo --- */
+.verb-info-container {
+    margin-top: 20px;
+    /* padding: 15px; */ /* El padding ahora va en los hijos si es necesario */
+    /* border: 1px solid #ddd; */ /* Quitamos el borde general, lo tendrán las tarjetas */
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajusta minmax según necesidad */
+    gap: 20px; /* Espacio entre las columnas/tarjetas de tiempo */
+}
+
+/* Contenedor del nombre del verbo y su botón de sonido */
+#verbNameContainer {
+    grid-column: 1 / -1; /* Ocupa todo el ancho de la grilla */
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Reducido el margen, ya que los p tendrán el suyo */
+}
+
+#verbNameContainer h2 { /* El h2 es #verbName, pero apuntamos al h2 dentro del contenedor */
+    margin-bottom: 0; 
+    margin-right: 10px;
+    color: #333; /* Color del título del verbo */
+    font-size: 1.8em;
+}
+
+/* Párrafos de información general del verbo (significado, tipo, aux) */
+.verb-general-detail {
+    grid-column: 1 / -1; /* Ocupan todo el ancho de la grilla */
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+.verb-general-detail:last-of-type { /* El último párrafo general */
+    margin-bottom: 20px; /* Más espacio antes de las tarjetas de tiempo */
+}
+
+
+/* Estilo de cada "tarjeta" de tiempo verbal */
+.tense-section {
+    background-color: #fdfdfd;
+    padding: 15px;
+    border: 1px solid #e7e7e7;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column; /* Para que el ejemplo se vaya al final */
+}
+
+.tense-section h3 {
+    color: #007bff;
+    margin-top: 0;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.conjugation-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 15px; /* Espacio antes del ejemplo */
+}
+
+.conjugation-list li {
+    background-color: #f9f9f9;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 0.9em;
+}
+.conjugation-list li:last-child {
+    margin-bottom: 0;
+}
+
+.example {
+    font-style: italic;
+    color: #555;
+    background-color: #e6f2ff; /* Un azul más claro */
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+    margin-top: auto; /* Empuja el ejemplo al final de la tarjeta */
+    font-size: 0.9em;
+}
+
+.example strong {
+    font-style: normal;
+}
+
+.speak-btn {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 5px; /* Reducido ligeramente */
+    padding: 0 5px;
+    color: #007bff;
+    vertical-align: middle;
+}
+
+.speak-btn:hover {
+    color: #0056b3;
+}
+
+/* Estilo para el texto de solo lectura para accesibilidad */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.error-message {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    text-align: center;
+}
+.additional-resources-section {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Otra forma de separar visualmente */
+    text-align: center; /* Opcional, para centrar el contenido de esta sección */
+}
+
+.additional-resources-section h2 {
+    margin-bottom: 15px;
+    color: #333; /* O el color de tus otros títulos */
+}
+
+#openPhrasesPageButton {
+    /* Hereda de .searchButton si quieres o define estilos específicos aquí */
+    padding: 10px 20px; /* Ejemplo */
+    font-size: 1em;     /* Ejemplo */
+    /* background-color: #5cb85c; */ /* Ejemplo de color */
+    /* color: white; */
+    /* border: none; */
+    /* border-radius: 4px; */
+    /* cursor: pointer; */
+}
+
+/* Si quieres que el botón se parezca más a los de entrada */
+.input-section button, #openPhrasesPageButton {
+    padding: 10px 15px;
+    background-color: #007bff; /* O tu color primario */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover, #openPhrasesPageButton:hover {
+    background-color: #0056b3; /* Un tono más oscuro para el hover */
+}
