@@ -117,6 +117,66 @@ const spanishToFrench = {
     "viajar": "voyager",
     "vivir": "vivre",
     "volver": "rentrer", // también "revenir"
+    "casarse": "se marier",
+    "darse prisa": "se dépêcher",
+    "luchar": "se battre",
+    "acostumbrarse": "s'habituer à",
+    // ...agrega dentro de spanishToFrench...
+"desvestirse": "se déshabiller",
+"ducharse": "se doucher",
+"cepillarse los dientes": "se brosser les dents",
+"peinarse": "se peigner",
+"arreglarse el pelo": "se coiffer",
+"afeitarse": "se raser",
+"maquillarse": "se maquiller",
+"prepararse": "se préparer",
+"dormirse": "s'endormir",
+"despertarse": "se réveiller",
+"sentarse": "s'asseoir",
+"pasear": "se promener",
+"pararse": "s'arrêter",
+"detenerse": "s'arrêter",
+"irse": "s'en aller",
+"marcharse": "s'en aller",
+"instalarse": "s'installer",
+"establecerse": "s'installer",
+"desplazarse": "se déplacer",
+"dirigirse a": "se rendre à",
+"ir a": "se rendre à",
+"encontrarse": "se trouver",
+"estar ubicado": "se trouver",
+"divertirse": "s'amuser",
+"aburrirse": "s'ennuyer",
+"enfadarse": "s'énerver",
+"ponerse nervioso": "s'énerver",
+"calmarse": "se calmer",
+"acordarse de": "se souvenir de",
+"preocuparse": "s'inquiéter",
+"sentirse": "se sentir",
+"equivocarse": "se tromper",
+"sospechar": "se douter de",
+"figurarse": "se douter de",
+"quejarse": "se plaindre",
+"alegrarse": "se réjouir",
+"hablarse": "se parler",
+"llamarse por teléfono": "se téléphoner",
+"encontrarse (con alguien)": "se rencontrer",
+"conocerse": "se rencontrer",
+"amarse": "s'aimer",
+"quererse": "s'aimer",
+"odiarse": "se détester",
+"besarse": "s'embrasser",
+"pelearse": "se disputer",
+"discutir": "se disputer",
+"ayudarse": "s'aider",
+"darse": "se donner",
+"escribirse": "s'écrire",
+"utilizarse": "se servir de",
+"servirse de": "se servir de",
+"callarse": "se taire",
+"darse cuenta de": "se rendre compte de",
+"acostumbrarse a": "s'habituer à"
+
 };
 
 const verbsDB = {
@@ -1567,10 +1627,501 @@ const verbsDB = {
             imparfait: "Elle voyageait autour du monde.",
             futur: "Tu voyageras beaucoup."
         }
+    },
+
+
+
+
+// ...existing code...
+"se lever": {
+    meaning: "levantarse",
+    type: "pronominal (-er, e->è)",
+    aux: "être",
+    pp: "levé",
+    present: ["me lève", "te lèves", "se lève", "nous levons", "vous levez", "se lèvent"],
+    imparfait: ["me levais", "te levais", "se levait", "nous levions", "vous leviez", "se levaient"],
+    futur: ["me lèverai", "te lèveras", "se lèvera", "nous lèverons", "vous lèverez", "se lèveront"],
+    examples: {
+        present: "Je me lève à 7 heures."
     }
+},
+"se coucher": {
+    meaning: "acostarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "couché",
+    present: ["me couche", "te couches", "se couche", "nous couchons", "vous couchez", "se couchent"],
+    imparfait: ["me couchais", "te couchais", "se couchait", "nous couchions", "vous couchiez", "se couchaient"],
+    futur: ["me coucherai", "te coucheras", "se couchera", "nous coucherons", "vous coucherez", "se coucheront"],
+    examples: {
+        present: "Je me couche tard."
+    }
+},
+"s'habiller": {
+    meaning: "vestirse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "habillé",
+    present: ["m'habille", "t'habilles", "s'habille", "nous habillons", "vous habillez", "s'habillent"],
+    imparfait: ["m'habillais", "t'habillais", "s'habillait", "nous habillions", "vous habilliez", "s'habillaient"],
+    futur: ["m'habillerai", "t'habilleras", "s'habillera", "nous habillerons", "vous habillerez", "s'habilleront"],
+    examples: {
+        present: "Je m'habille rapidement."
+    }
+},
+"se déshabiller": {
+    meaning: "desvestirse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "déshabillé",
+    present: ["me déshabille", "te déshabilles", "se déshabille", "nous déshabillons", "vous déshabillez", "se déshabillent"],
+    imparfait: ["me déshabillais", "te déshabillais", "se déshabillait", "nous déshabillions", "vous déshabilliez", "se déshabillaient"],
+    futur: ["me déshabillerai", "te déshabilleras", "se déshabillera", "nous déshabillerons", "vous déshabillerez", "se déshabilleront"],
+    examples: {
+        present: "Il se déshabille avant de dormir."
+    }
+},
+"se laver": {
+    meaning: "lavarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "lavé",
+    present: ["me lave", "te laves", "se lave", "nous lavons", "vous lavez", "se lavent"],
+    imparfait: ["me lavais", "te lavais", "se lavait", "nous lavions", "vous laviez", "se lavaient"],
+    futur: ["me laverai", "te laveras", "se lavera", "nous laverons", "vous laverez", "se laveront"],
+    examples: {
+        present: "Nous nous lavons les mains."
+    }
+},
+"se doucher": {
+    meaning: "ducharse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "douché",
+    present: ["me douche", "te douches", "se douche", "nous douchons", "vous douchez", "se douchent"],
+    imparfait: ["me douchais", "te douchais", "se douchait", "nous douchions", "vous douchiez", "se douchaient"],
+    futur: ["me doucherai", "te doucheras", "se douchera", "nous doucherons", "vous doucherez", "se doucheront"],
+    examples: {
+        present: "Elle se douche chaque matin."
+    }
+},
+"se brosser les dents": {
+    meaning: "cepillarse los dientes",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "brossé les dents",
+    present: ["me brosse les dents", "te brosses les dents", "se brosse les dents", "nous brossons les dents", "vous brossez les dents", "se brossent les dents"],
+    imparfait: ["me brossais les dents", "te brossais les dents", "se brossait les dents", "nous brossions les dents", "vous brossiez les dents", "se brossaient les dents"],
+    futur: ["me brosserai les dents", "te brosseras les dents", "se brossera les dents", "nous brosserons les dents", "vous brosserez les dents", "se brosseront les dents"],
+    examples: {
+        present: "Tu te brosses les dents ?"
+    }
+},
+"se peigner": {
+    meaning: "peinarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "peigné",
+    present: ["me peigne", "te peignes", "se peigne", "nous peignons", "vous peignez", "se peignent"],
+    imparfait: ["me peignais", "te peignais", "se peignait", "nous peignions", "vous peigniez", "se peignaient"],
+    futur: ["me peignerai", "te peigneras", "se peignera", "nous peignerons", "vous peignerez", "se peigneront"],
+    examples: {
+        present: "Je me peigne devant le miroir."
+    }
+},
+"se coiffer": {
+    meaning: "arreglarse el pelo",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "coiffé",
+    present: ["me coiffe", "te coiffes", "se coiffe", "nous coiffons", "vous coiffez", "se coiffent"],
+    imparfait: ["me coiffais", "te coiffais", "se coiffait", "nous coiffions", "vous coiffiez", "se coiffaient"],
+    futur: ["me coifferai", "te coifferas", "se coiffera", "nous coifferons", "vous coifferez", "se coifferont"],
+    examples: {
+        present: "Je me coiffe chaque matin."
+    }
+},
+"se raser": {
+    meaning: "afeitarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "rasé",
+    present: ["me rase", "te rases", "se rase", "nous rasons", "vous rasez", "se rasent"],
+    imparfait: ["me rasais", "te rasais", "se rasait", "nous rasions", "vous rasiez", "se rasaient"],
+    futur: ["me raserai", "te raseras", "se rasera", "nous raserons", "vous raserez", "se raseront"],
+    examples: {
+        present: "Il se rase tous les jours."
+    }
+},
+"se maquiller": {
+    meaning: "maquillarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "maquillé",
+    present: ["me maquille", "te maquilles", "se maquille", "nous maquillons", "vous maquillez", "se maquillent"],
+    imparfait: ["me maquillais", "te maquillais", "se maquillait", "nous maquillions", "vous maquilliez", "se maquillaient"],
+    futur: ["me maquillerai", "te maquilleras", "se maquillera", "nous maquillerons", "vous maquillerez", "se maquilleront"],
+    examples: {
+        present: "Elle se maquille pour sortir."
+    }
+},
+"se préparer": {
+    meaning: "prepararse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "préparé",
+    present: ["me prépare", "te prépares", "se prépare", "nous préparons", "vous préparez", "se préparent"],
+    imparfait: ["me préparais", "te préparais", "se préparait", "nous préparions", "vous prépariez", "se préparaient"],
+    futur: ["me préparerai", "te prépareras", "se préparera", "nous préparerons", "vous préparerez", "se prépareront"],
+    examples: {
+        present: "Nous nous préparons pour le voyage."
+    }
+},
+"s'endormir": {
+    meaning: "dormirse",
+    type: "pronominal (irregular, como dormir)",
+    aux: "être",
+    pp: "endormi",
+    present: ["m'endors", "t'endors", "s'endort", "nous endormons", "vous endormez", "s'endorment"],
+    imparfait: ["m'endormais", "t'endormais", "s'endormait", "nous endormions", "vous endormiez", "s'endormaient"],
+    futur: ["m'endormirai", "t'endormiras", "s'endormira", "nous endormirons", "vous endormirez", "s'endormiront"],
+    examples: {
+        present: "Il s'endort vite."
+    }
+},
+"se réveiller": {
+    meaning: "despertarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "réveillé",
+    present: ["me réveille", "te réveilles", "se réveille", "nous réveillons", "vous réveillez", "se réveillent"],
+    imparfait: ["me réveillais", "te réveillais", "se réveillait", "nous réveillions", "vous réveilliez", "se réveillaient"],
+    futur: ["me réveillerai", "te réveilleras", "se réveillera", "nous réveillerons", "vous réveillerez", "se réveilleront"],
+    examples: {
+        present: "Je me réveille tôt."
+    }
+},
+// ...agrega los demás verbos pronominales siguiendo este formato...
+// ...dentro de verbsDB...
+"se dépêcher": {
+    meaning: "darse prisa",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "dépêché",
+    present: ["me dépêche", "te dépêches", "se dépêche", "nous dépêchons", "vous dépêchez", "se dépêchent"],
+    imparfait: ["me dépêchais", "te dépêchais", "se dépêchait", "nous dépêchions", "vous dépêchiez", "se dépêchaient"],
+    futur: ["me dépêcherai", "te dépêcheras", "se dépêchera", "nous dépêcherons", "vous dépêcherez", "se dépêcheront"],
+    examples: {
+        present: "Dépêche-toi !"
+    }
+},
+"se marier": {
+    meaning: "casarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "marié",
+    present: ["me marie", "te maries", "se marie", "nous marions", "vous mariez", "se marient"],
+    imparfait: ["me mariais", "te mariais", "se mariait", "nous mariions", "vous mariiez", "se mariaient"],
+    futur: ["me marierai", "te marieras", "se mariera", "nous marierons", "vous marierez", "se marieront"],
+    examples: {
+        present: "Ils se marient en juin."
+    }
+},
+"se battre": {
+    meaning: "luchar, pelear",
+    type: "pronominal (irregular, como battre)",
+    aux: "être",
+    pp: "battu",
+    present: ["me bats", "te bats", "se bat", "nous battons", "vous battez", "se battent"],
+    imparfait: ["me battais", "te battais", "se battait", "nous battions", "vous battiez", "se battaient"],
+    futur: ["me battrai", "te battras", "se battra", "nous battrons", "vous battrez", "se battront"],
+    examples: {
+        present: "Ils se battent pour la justice."
+    }
+},
+// ...agrega los demás siguiendo el mismo formato...
+// ...agrega dentro de verbsDB...
 
-
-
+"s'en aller": {
+    meaning: "irse, marcharse",
+    type: "pronominal (irregular)",
+    aux: "être",
+    pp: "allé",
+    present: ["m'en vais", "t'en vas", "s'en va", "nous en allons", "vous en allez", "s'en vont"],
+    imparfait: ["m'en allais", "t'en allais", "s'en allait", "nous en allions", "vous en alliez", "s'en allaient"],
+    futur: ["m'en irai", "t'en iras", "s'en ira", "nous en irons", "vous en irez", "s'en iront"],
+    examples: { present: "Je m'en vais maintenant." }
+},
+"s'arrêter": {
+    meaning: "pararse, detenerse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "arrêté",
+    present: ["m'arrête", "t'arrêtes", "s'arrête", "nous arrêtons", "vous arrêtez", "s'arrêtent"],
+    imparfait: ["m'arrêtais", "t'arrêtais", "s'arrêtait", "nous arrêtions", "vous arrêtiez", "s'arrêtaient"],
+    futur: ["m'arrêterai", "t'arrêteras", "s'arrêtera", "nous arrêterons", "vous arrêterez", "s'arrêteront"],
+    examples: { present: "Le bus s'arrête ici." }
+},
+"s'installer": {
+    meaning: "instalarse, establecerse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "installé",
+    present: ["m'installe", "t'installes", "s'installe", "nous installons", "vous installez", "s'installent"],
+    imparfait: ["m'installais", "t'installais", "s'installait", "nous installions", "vous installiez", "s'installaient"],
+    futur: ["m'installerai", "t'installeras", "s'installera", "nous installerons", "vous installerez", "s'installeront"],
+    examples: { present: "Ils s'installent à Paris." }
+},
+"se déplacer": {
+    meaning: "desplazarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "déplacé",
+    present: ["me déplace", "te déplaces", "se déplace", "nous déplaçons", "vous déplacez", "se déplacent"],
+    imparfait: ["me déplaçais", "te déplaçais", "se déplaçait", "nous déplacions", "vous déplaciez", "se déplaçaient"],
+    futur: ["me déplacerai", "te déplaceras", "se déplacera", "nous déplacerons", "vous déplacerez", "se déplaceront"],
+    examples: { present: "Je me déplace en métro." }
+},
+"se rendre à": {
+    meaning: "dirigirse a, ir a",
+    type: "pronominal (-re)",
+    aux: "être",
+    pp: "rendu",
+    present: ["me rends à", "te rends à", "se rend à", "nous rendons à", "vous rendez à", "se rendent à"],
+    imparfait: ["me rendais à", "te rendais à", "se rendait à", "nous rendions à", "vous rendiez à", "se rendaient à"],
+    futur: ["me rendrai à", "te rendras à", "se rendra à", "nous rendrons à", "vous rendrez à", "se rendront à"],
+    examples: { present: "Je me rends à l'école." }
+},
+"se trouver": {
+    meaning: "encontrarse, estar ubicado",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "trouvé",
+    present: ["me trouve", "te trouves", "se trouve", "nous trouvons", "vous trouvez", "se trouvent"],
+    imparfait: ["me trouvais", "te trouvais", "se trouvait", "nous trouvions", "vous trouviez", "se trouvaient"],
+    futur: ["me trouverai", "te trouveras", "se trouvera", "nous trouverons", "vous trouverez", "se trouveront"],
+    examples: { present: "La bibliothèque se trouve ici." }
+},
+"s'amuser": {
+    meaning: "divertirse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "amusé",
+    present: ["m'amuse", "t'amuses", "s'amuse", "nous amusons", "vous amusez", "s'amusent"],
+    imparfait: ["m'amusais", "t'amusais", "s'amusait", "nous amusions", "vous amusiez", "s'amusaient"],
+    futur: ["m'amuserai", "t'amuseras", "s'amusera", "nous amuserons", "vous amuserez", "s'amuseront"],
+    examples: { present: "Les enfants s'amusent bien." }
+},
+"s'ennuyer": {
+    meaning: "aburrirse",
+    type: "pronominal (-yer, y->i)",
+    aux: "être",
+    pp: "ennuyé",
+    present: ["m'ennuie", "t'ennuies", "s'ennuie", "nous ennuyons", "vous ennuyez", "s'ennuient"],
+    imparfait: ["m'ennuyais", "t'ennuyais", "s'ennuyait", "nous ennuyions", "vous ennuyiez", "s'ennuyaient"],
+    futur: ["m'ennuierai", "t'ennuieras", "s'ennuiera", "nous ennuierons", "vous ennuierez", "s'ennuieront"],
+    examples: { present: "Je m'ennuie en classe." }
+},
+"s'énerver": {
+    meaning: "enfadarse, ponerse nervioso",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "énervé",
+    present: ["m'énerve", "t'énerves", "s'énerve", "nous énervons", "vous énervez", "s'énervent"],
+    imparfait: ["m'énervais", "t'énervais", "s'énervait", "nous énervions", "vous énerviez", "s'énervaient"],
+    futur: ["m'énerverai", "t'énerveras", "s'énervera", "nous énerverons", "vous énerverez", "s'énerveront"],
+    examples: { present: "Il s'énerve facilement." }
+},
+"se calmer": {
+    meaning: "calmarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "calmé",
+    present: ["me calme", "te calmes", "se calme", "nous calmons", "vous calmez", "se calment"],
+    imparfait: ["me calmais", "te calmais", "se calmait", "nous calmions", "vous calmiez", "se calmaient"],
+    futur: ["me calmerai", "te calmeras", "se calmera", "nous calmerons", "vous calmerez", "se calmeront"],
+    examples: { present: "Calme-toi !" }
+},
+"s'inquiéter": {
+    meaning: "preocuparse",
+    type: "pronominal (-er, é->è)",
+    aux: "être",
+    pp: "inquiété",
+    present: ["m'inquiète", "t'inquiètes", "s'inquiète", "nous inquiétons", "vous inquiétez", "s'inquiètent"],
+    imparfait: ["m'inquiétais", "t'inquiétais", "s'inquiétait", "nous inquiétions", "vous inquiétiez", "s'inquiétaient"],
+    futur: ["m'inquiéterai", "t'inquiéteras", "s'inquiétera", "nous inquiéterons", "vous inquiéterez", "s'inquiéteront"],
+    examples: { present: "Je m'inquiète pour toi." }
+},
+"se tromper": {
+    meaning: "equivocarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "trompé",
+    present: ["me trompe", "te trompes", "se trompe", "nous trompons", "vous trompez", "se trompent"],
+    imparfait: ["me trompais", "te trompais", "se trompait", "nous trompions", "vous trompiez", "se trompaient"],
+    futur: ["me tromperai", "te tromperas", "se trompera", "nous tromperons", "vous tromperez", "se tromperont"],
+    examples: { present: "Je me trompe souvent." }
+},
+"se douter de": {
+    meaning: "sospechar, figurarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "douté",
+    present: ["me doute de", "te doutes de", "se doute de", "nous doutons de", "vous doutez de", "se doutent de"],
+    imparfait: ["me doutais de", "te doutais de", "se doutait de", "nous doutions de", "vous doutiez de", "se doutaient de"],
+    futur: ["me douterai de", "te douteras de", "se doutera de", "nous douterons de", "vous douterez de", "se douteront de"],
+    examples: { present: "Je me doute de la vérité." }
+},
+"se plaindre": {
+    meaning: "quejarse",
+    type: "pronominal (irregular, como 'plaindre')",
+    aux: "être",
+    pp: "plaint",
+    present: ["me plains", "te plains", "se plaint", "nous plaignons", "vous plaignez", "se plaignent"],
+    imparfait: ["me plaignais", "te plaignais", "se plaignait", "nous plaignions", "vous plaigniez", "se plaignaient"],
+    futur: ["me plaindrai", "te plaindras", "se plaindra", "nous plaindrons", "vous plaindrez", "se plaindront"],
+    examples: { present: "Il se plaint tout le temps." }
+},
+"se réjouir": {
+    meaning: "alegrarse",
+    type: "pronominal (-ir, como finir)",
+    aux: "être",
+    pp: "réjoui",
+    present: ["me réjouis", "te réjouis", "se réjouit", "nous réjouissons", "vous réjouissez", "se réjouissent"],
+    imparfait: ["me réjouissais", "te réjouissais", "se réjouissait", "nous réjouissions", "vous réjouissiez", "se réjouissaient"],
+    futur: ["me réjouirai", "te réjouiras", "se réjouira", "nous réjouirons", "vous réjouirez", "se réjouiront"],
+    examples: { present: "Je me réjouis de te voir." }
+},
+"se parler": {
+    meaning: "hablarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "parlé",
+    present: ["me parle", "te parles", "se parle", "nous parlons", "vous parlez", "se parlent"],
+    imparfait: ["me parlais", "te parlais", "se parlait", "nous parlions", "vous parliez", "se parlaient"],
+    futur: ["me parlerai", "te parleras", "se parlera", "nous parlerons", "vous parlerez", "se parleront"],
+    examples: { present: "Nous nous parlons souvent." }
+},
+"se téléphoner": {
+    meaning: "llamarse por teléfono",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "téléphoné",
+    present: ["me téléphone", "te téléphones", "se téléphone", "nous téléphonons", "vous téléphonez", "se téléphonent"],
+    imparfait: ["me téléphonais", "te téléphonais", "se téléphonait", "nous téléphonions", "vous téléphoniez", "se téléphonaient"],
+    futur: ["me téléphonerai", "te téléphoneras", "se téléphonera", "nous téléphonerons", "vous téléphonerez", "se téléphoneront"],
+    examples: { present: "Ils se téléphonent chaque semaine." }
+},
+"se rencontrer": {
+    meaning: "encontrarse (con alguien), conocerse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "rencontré",
+    present: ["me rencontre", "te rencontres", "se rencontre", "nous rencontrons", "vous rencontrez", "se rencontrent"],
+    imparfait: ["me rencontrais", "te rencontrais", "se rencontrait", "nous rencontrions", "vous rencontriez", "se rencontraient"],
+    futur: ["me rencontrerai", "te rencontreras", "se rencontrera", "nous rencontrerons", "vous rencontrerez", "se rencontreront"],
+    examples: { present: "Nous nous rencontrons au café." }
+},
+"s'aimer": {
+    meaning: "amarse, quererse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "aimé",
+    present: ["m'aime", "t'aimes", "s'aime", "nous aimons", "vous aimez", "s'aiment"],
+    imparfait: ["m'aimais", "t'aimais", "s'aimait", "nous aimions", "vous aimiez", "s'aimaient"],
+    futur: ["m'aimerai", "t'aimeras", "s'aimera", "nous aimerons", "vous aimerez", "s'aimeront"],
+    examples: { present: "Ils s'aiment beaucoup." }
+},
+"se détester": {
+    meaning: "odiarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "détesté",
+    present: ["me déteste", "te détestes", "se déteste", "nous détestons", "vous détestez", "se détestent"],
+    imparfait: ["me détestais", "te détestais", "se détestait", "nous détestions", "vous détestiez", "se détestaient"],
+    futur: ["me détesterai", "te détesteras", "se détestera", "nous détesterons", "vous détesterez", "se détesteront"],
+    examples: { present: "Elles se détestent." }
+},
+"s'embrasser": {
+    meaning: "besarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "embrassé",
+    present: ["m'embrasse", "t'embrasses", "s'embrasse", "nous embrassons", "vous embrassez", "s'embrassent"],
+    imparfait: ["m'embrassais", "t'embrassais", "s'embrassait", "nous embrassions", "vous embrassiez", "s'embrassaient"],
+    futur: ["m'embrasserai", "t'embrasseras", "s'embrassera", "nous embrasserons", "vous embrasserez", "s'embrasseront"],
+    examples: { present: "Ils s'embrassent sous la pluie." }
+},
+"se disputer": {
+    meaning: "pelearse, discutir",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "disputé",
+    present: ["me dispute", "te disputes", "se dispute", "nous disputons", "vous disputez", "se disputent"],
+    imparfait: ["me disputais", "te disputais", "se disputait", "nous disputions", "vous disputiez", "se disputaient"],
+    futur: ["me disputerai", "te disputeras", "se disputera", "nous disputerons", "vous disputerez", "se disputeront"],
+    examples: { present: "Nous nous disputons rarement." }
+},
+"s'aider": {
+    meaning: "ayudarse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "aidé",
+    present: ["m'aide", "t'aides", "s'aide", "nous aidons", "vous aidez", "s'aident"],
+    imparfait: ["m'aidais", "t'aidais", "s'aidait", "nous aidions", "vous aidiez", "s'aidaient"],
+    futur: ["m'aiderai", "t'aideras", "s'aidera", "nous aiderons", "vous aiderez", "s'aideront"],
+    examples: { present: "Ils s'aident entre eux." }
+},
+"se donner": {
+    meaning: "darse",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "donné",
+    present: ["me donne", "te donnes", "se donne", "nous donnons", "vous donnez", "se donnent"],
+    imparfait: ["me donnais", "te donnais", "se donnait", "nous donnions", "vous donniez", "se donnaient"],
+    futur: ["me donnerai", "te donneras", "se donnera", "nous donnerons", "vous donnerez", "se donneront"],
+    examples: { present: "Nous nous donnons des cadeaux." }
+},
+"s'écrire": {
+    meaning: "escribirse",
+    type: "pronominal (-re)",
+    aux: "être",
+    pp: "écrit",
+    present: ["m'écris", "t'écris", "s'écrit", "nous écrivons", "vous écrivez", "s'écrivent"],
+    imparfait: ["m'écrivais", "t'écrivais", "s'écrivait", "nous écrivions", "vous écriviez", "s'écrivaient"],
+    futur: ["m'écrirai", "t'écriras", "s'écrira", "nous écrirons", "vous écrirez", "s'écriront"],
+    examples: { present: "Nous nous écrivons chaque mois." }
+},
+"se servir de": {
+    meaning: "utilizarse, servirse de",
+    type: "pronominal (-ir, como servir)",
+    aux: "être",
+    pp: "servi",
+    present: ["me sers de", "te sers de", "se sert de", "nous servons de", "vous servez de", "se servent de"],
+    imparfait: ["me servais de", "te servais de", "se servait de", "nous servions de", "vous serviez de", "se servaient de"],
+    futur: ["me servirai de", "te serviras de", "se servira de", "nous servirons de", "vous servirez de", "se serviront de"],
+    examples: { present: "Je me sers de cet outil." }
+},
+"se taire": {
+    meaning: "callarse",
+    type: "pronominal (irregular, como 'taire')",
+    aux: "être",
+    pp: "tu",
+    present: ["me tais", "te tais", "se tait", "nous taisons", "vous taisez", "se taisent"],
+    imparfait: ["me taisais", "te taisais", "se taisait", "nous taisions", "vous taisiez", "se taisaient"],
+    futur: ["me tairai", "te tairas", "se taira", "nous tairons", "vous tairez", "se tairont"],
+    examples: { present: "Tais-toi !" }
+},
+"se rendre compte de": {
+    meaning: "darse cuenta de",
+    type: "pronominal (-re)",
+    aux: "être",
+    pp: "rendu compte de",
+    present: ["me rends compte de", "te rends compte de", "se rend compte de", "nous rendons compte de", "vous rendez compte de", "se rendent compte de"],
+    imparfait: ["me rendais compte de", "te rendais compte de", "se rendait compte de", "nous rendions compte de", "vous rendiez compte de", "se rendaient compte de"],
+    futur: ["me rendrai compte de", "te rendras compte de", "se rendra compte de", "nous rendrons compte de", "vous rendrez compte de", "se rendront compte de"],
+    examples: { present: "Je me rends compte de l'erreur." }
+}
 
 
 };

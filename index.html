@@ -74,6 +74,26 @@
         </div>
         <div id="errorMessage" class="error-message" style="display:none;"></div>
 
+<!-- Tabla de tipos de verbos -->
+<table style="margin: 30px auto 20px auto; text-align: center;">
+    <tr>
+        <td>
+            <button onclick="window.open('verbs.html', '_blank')" style="width: 180px;">Verbos Pronominales</button>
+        </td>
+        <td>
+            <button onclick="window.open('verbs_regulares.html', '_blank')" style="width: 180px;">Verbos Regulares</button>
+        </td>
+        <td>
+            <button onclick="window.open('verbs_irregulares.html', '_blank')" style="width: 180px;">Verbos Irregulares</button>
+        </td>
+        <td>
+            <button onclick="window.open('verbs_auxiliares.html', '_blank')" style="width: 180px;">Verbos Auxiliares</button>
+        </td>
+    </tr>
+</table>
+
+
+
         <!-- NUEVA SECCIÓN PARA RECURSOS ADICIONALES -->
         <hr style="margin-top: 30px; margin-bottom: 20px;">
         <div class="additional-resources-section">
@@ -113,6 +133,18 @@
         });
     });
 </script>
-
+<script>
+// filepath: c:\French\index.html
+window.addEventListener('DOMContentLoaded', function() {
+    // Obtén el parámetro "verbo" de la URL
+    const params = new URLSearchParams(window.location.search);
+    const verbo = params.get('verbo');
+    const input = document.getElementById('verbInput');
+    if (verbo && input) {
+        input.value = verbo;
+        input.focus();
+    }
+});
+</script>
 </body>
 </html>
