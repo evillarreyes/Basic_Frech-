@@ -9,7 +9,22 @@
 <body>
     <div class="container">
         <h1>Conjugador de Verbos Franceses</h1>
-
+<table class="verbs-table">
+    <tr>
+        <td><button class="quick-verb-btn" data-verb="être">être / to be / ser</button></td>
+        <td><button class="quick-verb-btn" data-verb="avoir">avoir / to have / tener</button></td>
+        <td><button class="quick-verb-btn" data-verb="devoir">devoir / must / deber</button></td>
+        <td><button class="quick-verb-btn" data-verb="avoir besoin de">avoir besoin de / to need / necesitar</button></td>
+        <td><button class="quick-verb-btn" data-verb="pouvoir">pouvoir / can / poder</button></td>
+    </tr>
+    <tr>
+        <td><button class="quick-verb-btn" data-verb="vouloir">vouloir / to want / querer</button></td>
+        <td><button class="quick-verb-btn" data-verb="aimer">aimer / to like / gustar</button></td>
+        <td><button class="quick-verb-btn" data-verb="faire">faire / to do / hacer</button></td>
+        <td><button class="quick-verb-btn" data-verb="sentir">sentir / to feel / sentir</button></td>
+        <td><button class="quick-verb-btn" data-verb="aller">aller / to go / ir</button></td>
+    </tr>
+</table>
         <div class="input-section">
             <label for="verbInput">Escribe un verbo en francés o español:</label>
             <input type="text" id="verbInput" placeholder="Ej: aimer, ser">
@@ -89,7 +104,15 @@
 <img src="//www.shinystat.com/cgi-bin/shinystat.cgi?USER=SS-53187623-f43e4" alt="Statistiche web" style="border:0px" /></a>
 </noscript>
 <!-- Fine Codice ShinyStat -->
-
+<script>
+    // Script para los botones de verbos rápidos
+    document.querySelectorAll('.quick-verb-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            document.getElementById('verbInput').value = btn.getAttribute('data-verb');
+            document.getElementById('searchButton').click();
+        });
+    });
+</script>
 
 </body>
 </html>

@@ -287,6 +287,53 @@ const verbsDB = {
             futur: "Elle aura une surprise."
         }
     },
+
+
+
+
+"avoir besoin de": {
+    meaning: "necesitar",
+    type: "expresión (avoir + besoin de)",
+    aux: "avoir",
+    pp: "eu besoin de",
+    present: [
+        "ai besoin de",      // j'ai besoin de
+        "as besoin de",      // tu as besoin de
+        "a besoin de",       // il/elle/on a besoin de
+        "avons besoin de",   // nous avons besoin de
+        "avez besoin de",    // vous avez besoin de
+        "ont besoin de"      // ils/elles ont besoin de
+    ],
+    imparfait: [
+        "avais besoin de",
+        "avais besoin de",
+        "avait besoin de",
+        "avions besoin de",
+        "aviez besoin de",
+        "avaient besoin de"
+    ],
+    futur: [
+        "aurai besoin de",
+        "auras besoin de",
+        "aura besoin de",
+        "aurons besoin de",
+        "aurez besoin de",
+        "auront besoin de"
+    ],
+    examples: {
+        present: "J'ai besoin de temps.",
+        passeCompose: "Nous avons eu besoin de ton aide.",
+        imparfait: "Elle avait besoin de repos.",
+        futur: "Tu auras besoin de patience."
+    }
+},
+
+
+
+
+
+
+
     "boire": {
         meaning: "beber",
         type: "irregular (-re)",
@@ -1521,6 +1568,11 @@ const verbsDB = {
             futur: "Tu voyageras beaucoup."
         }
     }
+
+
+
+
+
 };
 
 // Para el Passé Composé de être/avoir (auxiliares)
