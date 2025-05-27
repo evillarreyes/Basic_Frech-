@@ -2121,6 +2121,37 @@ const verbsDB = {
     imparfait: ["me rendais compte de", "te rendais compte de", "se rendait compte de", "nous rendions compte de", "vous rendiez compte de", "se rendaient compte de"],
     futur: ["me rendrai compte de", "te rendras compte de", "se rendra compte de", "nous rendrons compte de", "vous rendrez compte de", "se rendront compte de"],
     examples: { present: "Je me rends compte de l'erreur." }
+},
+
+"s'habituer à": {
+    meaning: "acostumbrarse a",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "habitué",
+    present: ["m'habitue à", "t'habitues à", "s'habitue à", "nous habituons à", "vous habituez à", "s'habituent à"],
+    imparfait: ["m'habituais à", "t'habituais à", "s'habituait à", "nous habituions à", "vous habituiez à", "s'habituaient à"],
+    futur: ["m'habituerai à", "t'habitueras à", "s'habituera à", "nous habituerons à", "vous habituerez à", "s'habitueront à"],
+    examples: { present: "Je m'habitue à la vie en France." }
+},
+"s'intéresser à": {
+    meaning: "interesarse por",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "intéressé",
+    present: ["m'intéresse à", "t'intéresses à", "s'intéresse à", "nous intéressons à", "vous intéressez à", "s'intéressent à"],
+    imparfait: ["m'intéressais à", "t'intéressais à", "s'intéressait à", "nous intéressions à", "vous intéressiez à", "s'intéressaient à"],
+    futur: ["m'intéresserai à", "t'intéresseras à", "s'intéressera à", "nous intéresserons à", "vous intéresserez à", "s'intéresseront à"],
+    examples: { present: "Je m'intéresse à l'art." }
+},
+"se passer": {
+    meaning: "pasar, ocurrir",
+    type: "pronominal (-er)",
+    aux: "être",
+    pp: "passé",
+    present: ["me passe", "te passes", "se passe", "nous passons", "vous passez", "se passent"],
+    imparfait: ["me passais", "te passais", "se passait", "nous passions", "vous passiez", "se passaient"],
+    futur: ["me passerai", "te passeras", "se passera", "nous passerons", "vous passerez", "se passeront"],
+    examples: { present: "Que s'est-il passé ?" }
 }
 
 

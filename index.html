@@ -27,7 +27,10 @@
 </table>
         <div class="input-section">
             <label for="verbInput">Escribe un verbo en francés o español:</label>
-            <input type="text" id="verbInput" placeholder="Ej: aimer, ser">
+            
+            <!-- Después del input de búsqueda -->
+            <input type="text" id="verbInput" placeholder="Ej: aimer, ser" autocomplete="off">
+            <div id="suggestions" class="suggestions-list" style="position:relative;"></div>
             
             <label for="verbSelect">O elige de la lista (francés):</label>
             <select id="verbSelect">
@@ -143,8 +146,77 @@ window.addEventListener('DOMContentLoaded', function() {
     if (verbo && input) {
         input.value = verbo;
         input.focus();
+         // Ejecuta la búsqueda automáticamente
+        document.getElementById('searchButton').click();
     }
 });
 </script>
+
+
+<script>
+// filepath: c:\French\index.html
+
+// Obtén la lista de verbos desde verbsDB (debes tener verbsDB en global)
+let verbList = [];
+if (typeof verbsDB !== "undefined") {
+    verbList = Object.keys(verbsDB);
+}
+
+// Si quieres incluir también los verbos en español:
+if (typeof spanishToFrench !== "undefined") {
+    verbList = verbList.concat(Object.keys(spanishToFrench));
+}
+
+// Elimina duplicados
+verbList = [...new Set(verbList)];
+
+const input = document.getElementById('verbInput');
+const suggestions = document.getElementById('suggestions');
+
+input.addEventListener('input', function() {
+    const value = input.value.trim().toLowerCase();
+    suggestions.innerHTML = '';
+    if (value.length === 0) return;
+
+    // Filtra los verbos que empiezan con lo escrito
+    const matches = verbList.filter(v => v.toLowerCase().startsWith(value)).slice(0, 8);
+
+    if (matches.length === 0) return;
+
+    const ul = document.createElement('ul');
+    ul.style.position = 'absolute';
+    ul.style.background = '#fff';
+    ul.style.border = '1px solid #ccc';
+    ul.style.width = input.offsetWidth + 'px';
+    ul.style.listStyle = 'none';
+    ul.style.margin = 0;
+    ul.style.padding = '2px 0';
+    ul.style.zIndex = 1000;
+
+    matches.forEach(match => {
+        const li = document.createElement('li');
+        li.textContent = match;
+        li.style.padding = '4px 10px';
+        li.style.cursor = 'pointer';
+        li.addEventListener('mousedown', function(e) {
+            e.preventDefault();
+            input.value = match;
+            suggestions.innerHTML = '';
+            document.getElementById('searchButton').click(); // <-- Ejecuta la búsqueda automáticamente
+        });
+        ul.appendChild(li);
+    });
+
+    suggestions.appendChild(ul);
+});
+
+// Oculta sugerencias al perder foco
+input.addEventListener('blur', function() {
+    setTimeout(() => { suggestions.innerHTML = ''; }, 100);
+});
+</script>
+
+
+
 </body>
 </html>
